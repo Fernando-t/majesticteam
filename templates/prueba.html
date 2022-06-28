@@ -7,6 +7,32 @@
     <title>Django prueba</title>
 </head>
 <body>
-     <h1>Este es mi incio </h1>
+     <h1>Este es el incio de la pagina de {{nombre}} {{apellido}}</h1>
+     {% if edad < 4500  %}
+     <p>Este fernando tiene mas edad de 4500.</p>
+     {% elif edad < 5500 %}
+     <p>Este fernando tiene menos edad de 5500.</p>
+     {% else %}
+     <p>Este fernando tiene mas edad que 5499.</p>
+     {% endif %}
+
+     
+     <ul>
+        {% for  valor in lista  %}
+        <li>Estudiante : {{valor}}</li>
+        {% endfor %}
+    </ul>
+
+    <p>
+        Info usuario
+        <ul>
+            <li>{{silver.nombre}}</li>
+            <li>{{silver.edad}}</li>
+        </ul>
+    </p>
+
+
+    
+
 </body>
 </html>
